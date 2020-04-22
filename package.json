@@ -1,0 +1,13 @@
+{
+  "name": "SASS",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Prachi Verma",
+  "license": "MIT",
+  "devDependencies": {
+    "bootstrap": "^4.4.1",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "node-sass": "^4.13.1"
+  }
+}

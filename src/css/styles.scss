@@ -1,0 +1,111 @@
+@import "variables";
+@import "mixins";
+
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: $offwhite;
+    color:$darkblue;
+    font-family: $font-comic;
+    font-size: 1.8rem;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+h1{
+    font-family: $font-cavecat;
+}
+
+h2{
+    font-family: $font-comic;
+}
+
+.media{
+    padding: 0;
+    margin:0;
+    list-style: none;
+
+    .item{
+        border-top: 1px dotted $red;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        padding-left: 10px;
+        // min-height: 90px;
+        &:hover{
+            background: $yellow;
+        }
+        &:last-of-type{
+            border-bottom: 1px dotted $red;
+        }
+         @include clearfix;
+    }
+    a{
+        text-decoration: none;        
+    }
+    img{
+        height: 80px;
+        width: 80px;
+        float: left;
+        margin-right: 10px;
+    }
+    .head{
+        color: $blue;
+        margin: 0;
+        padding:0;
+        font-size: 2rem;
+    }
+    p{
+        margin: 0;
+        font-size: 1.5rem;
+    }
+}
+
+.background{
+    margin:20px 0;
+    width: 100%;
+    display: table;
+
+
+    .container{
+        display: table-cell;
+        vertical-align: bottom;
+        padding-bottom: 20px;
+    }
+
+    h1{
+        font-family: $font-cavecat;
+        color: $yellow;
+        font-size: 5rem;
+        line-height: 105%;
+        margin-bottom: 0;
+        padding: 0 10%;
+    }
+    p{
+        margin-top: 0;
+        padding: 0 10%;
+        color: $offwhite;
+    }
+}
+
+.jumbotron{
+    @include backImage('../images/sol.jpg');
+}
+
+.grid{
+    @include clearfix;
+    .item{
+        float: left;
+        @include imagegrid(5,1%);
+    }
+    img{
+        display: block;
+        border-radius: 10px;
+        max-width: 100%;
+    }
+}
