@@ -19,7 +19,9 @@
 }
 
 @mixin imagegrid($count,$margin){
-    width:((100% - (($count - 1) * $margin))/$count);
+    $val:((100% - (($count - 1) * $margin))/$count);
+    width: $val;
+    height: $val*1.8;
     &:nth-child(n){
         margin-bottom: $margin;
         margin-right: $margin;

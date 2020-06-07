@@ -1,13 +1,18 @@
 {
-  "name": "SASS",
+  "name": "sass",
   "version": "1.0.0",
   "description": "",
   "author": "Prachi Verma",
   "license": "MIT",
+  "homepage": "https://pracheese.github.io/sass/",
   "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
     "bootstrap": "^4.4.1",
     "gh-pages": "^2.2.0",
     "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
     "gulp-sass": "^4.0.2",
     "node-sass": "^4.13.1"
   }

@@ -1,5 +1,6 @@
-const {src, dest} = require('gulp');
+const {src, dest, series} = require('gulp');
 const sass = require('gulp-sass');
+const babel = require('gulp-babel');
 
 function css(cb){
     src('src/css/styles.scss')
@@ -11,4 +12,15 @@ function css(cb){
     cb();
 }
 
-exports.default = css;
+function js(cb){
+    src('src/js/script.js')
+    .pipe(babel())
+    .pipe(dest('src/js_final'));
+
+    cb();
+}
+
+exports.css = css;
+exports.js = js;
+
+exports.default = series(css,js);
